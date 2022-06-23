@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        tools:context=".ui.activitys.MainActivity">
+
+
+        <ImageView
+            android:id="@+id/main_cpa_logo"
+
+            android:layout_width="120dp"
+
+            android:layout_height="120dp"
+            android:src="@drawable/cpa"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/main_pergunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_margin="15sp"
+            app:layout_constraintTop_toBottomOf="@id/main_cpa_logo"
+            tools:ignore="MissingConstraints"
+            tools:text="Em que ano o brasil foi descoberto?" />
+
+        <ListView
+            android:id="@+id/listView_auternativas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/main_button_prox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/main_pergunta"
+            android:scrollbars="vertical"
+            android:choiceMode="multipleChoice"
+            app:layout_constraintVertical_bias="0"
+            tools:ignore="MissingConstraints,NestedScrolling" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="5dp"
+            android:text="Próximo"
+            android:background="@drawable/custom_button_blue"
+            android:textAllCaps="false"
+            android:id="@+id/main_button_prox"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
